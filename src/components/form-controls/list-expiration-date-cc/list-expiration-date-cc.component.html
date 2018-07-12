@@ -1,0 +1,7 @@
+<div class="form-group p-relative">
+  <i class="ic-right down-triangle"></i>
+  <select autocomplete='cc-exp-month' class="form-control form-control-lg"  [id]="id" (change)="selectDate($event.target.value)">
+    <option disabled >{{placeholderKey | translate}}</option>
+    <option  [value]="date" *ngFor="let date of list">{{date}}</option>
+  </select>
+</div>

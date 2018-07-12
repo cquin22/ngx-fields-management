@@ -1,0 +1,11 @@
+<div class="form-group" [formGroup]="configForm">
+    <div class="d-flex justify-content-between custom-phone" [ngClass]="{'invalid-form ': dynamicFormService.validForm(configForm, controlName, isSubmittedForm)}">
+      <input
+        [formControlName]="controlName"
+        type="text"
+        class="form-control form-control-lg"
+        [id]="controlName"
+        placeholder="{{placeholder | translate}}"
+      >
+    </div>
+</div>

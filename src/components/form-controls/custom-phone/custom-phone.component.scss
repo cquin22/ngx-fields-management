@@ -1,0 +1,53 @@
+.custom-phone{
+  position: relative;
+  .select-country{
+    width: 143px;
+    border-top: 1px solid #e6ebf1;
+    border-left: 1px solid #e6ebf1;
+    border-bottom: 1px solid #e6ebf1;
+    position: relative;
+    font-size: 15px;
+    .selected-flag-country{
+      padding: 10px 15px;
+    }
+    .ic-right{
+      position: absolute;
+      right: 10px;
+      top: 20px;
+    }
+    img{
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+
+.drop {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  top: 48px;
+  left: 0;
+  border: 1px solid #e6ebf1;
+  max-height: 120px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 100;
+  font-size: 13px;
+  img{
+    transform: scale(0.7);
+  }
+  .country-select{
+    padding: 4px;
+    border-bottom: 1px solid #e6ebf1;
+    cursor: pointer;
+    &:last-child{
+      border-bottom: 1px solid transparent;
+    }
+    &:hover{
+      background-color: #eee;
+    }
+  }
+}

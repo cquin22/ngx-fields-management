@@ -1,0 +1,52 @@
+{
+  "name": "ng-field-management",
+  "version": "0.0.1",
+  "description": "Administration of dynamic fields for reactive forms with angular 6 and bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cquin22/ng-field-management.git"
+  },
+  "keywords": [
+    "Angular",
+    "6",
+    "Reactive",
+    "Forms",
+    "Dinamic",
+    "fields",
+    "Dinamic",
+    "inputs"
+  ],
+  "author": "Cristian Quintero <cristianqr22@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^6.0.7",
+    "@angular/core": "^6.0.7",
+    "@angular/forms": "^6.0.7",
+    "@angular/router": "^6.0.7",
+    "@ng-bootstrap/ng-bootstrap": "2.0.0",
+    "@ngx-translate/core": "^10.0.2",
+    "@ngx-translate/http-loader": "^3.0.1",
+    "credit-card-type": "^7.0.0",
+    "ng-click-outside": "^3.3.0",
+    "ng2-charts": "^1.6.0",
+    "ng2-currency-mask": "^5.3.1",
+    "ng2-file-upload": "^1.3.0",
+    "ngx-mask": "^2.9.3",
+    "rxjs-compat": "^6.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^2.7.2",
+    "systemjs": "0.19.40",
+    "core-js": "^2.4.1",
+    "rxjs": "6.2.1",
+    "zone.js": "^0.8.26"
+  },
+  "bugs": {
+    "url": "https://github.com/cquin22/ng-field-management/issues"
+  },
+  "homepage": "https://github.com/cquin22/ng-field-management#readme"
+}

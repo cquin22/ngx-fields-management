@@ -1,0 +1,20 @@
+<div class="col-sm-12">
+  <div class="error" *ngIf="dynamicFormService.validForm(configForm, controlName, isSubmittedForm) ">
+    <p *ngIf="dynamicFormService.validRequired(configForm, controlName, isSubmittedForm)">
+      {{'FORM_ERRORS.REQUIRED' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.validEmail(configForm, controlName, isSubmittedForm)">
+      {{'FORM_ERRORS.EMAIL' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'creditCardTypeError')">
+      Tarjeta no valida
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'creditCardNumberLengthError') && !dynamicFormService.ccValidator(configForm, controlName, 'creditCardTypeError')">
+      Longitud de la tarjeta no valida
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'creditCardCvvError')">
+      Error en Cvv
+    </p>
+  </div>
+</div>
+

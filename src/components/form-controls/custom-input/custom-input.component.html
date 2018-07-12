@@ -1,0 +1,11 @@
+<div class="form-group" [formGroup]="configForm">
+  <input
+    [formControlName]="controlName"
+    [mask]="mask"
+    type="text"
+    class="form-control form-control-lg"
+    [ngClass]="{'invalid-form ': dynamicFormService.validForm(configForm, controlName, isSubmittedForm)}"
+    [id]="controlName"
+    placeholder="{{placeholder  |translate}}"
+  >
+</div>
