@@ -13,6 +13,7 @@ import {HttpClient} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {DynamicFormService} from "./services/dynamic-form.service";
+import { PasswordHideComponent } from './components/password-hide/password-hide.component';
 
 
 
@@ -32,7 +33,8 @@ import {DynamicFormService} from "./services/dynamic-form.service";
     CreditCardMaskPipe,
     CreditCardTerminationMaskPipe,
     CreditCardTypePipe,
-    FieldsGroupComponent
+    FieldsGroupComponent,
+    PasswordHideComponent
   ],
   providers: [
     DynamicFormService
@@ -46,7 +48,8 @@ import {DynamicFormService} from "./services/dynamic-form.service";
     FieldsGroupComponent,
     CreditCardMaskPipe,
     CreditCardTerminationMaskPipe,
-    CreditCardTypePipe
+    CreditCardTypePipe,
+    PasswordHideComponent
   ]
 })
 export class NgFieldsCoreModule {

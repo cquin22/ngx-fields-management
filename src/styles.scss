@@ -1,4 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/*General */
+* {
+  outline: none !important;
+}
+
+textarea:focus, input:focus{
+  outline: none !important;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #fceeff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(244, 244, 244, 0.25);
+}
+
+/* Errors */
 .invalid-form {
   border: 1px solid red;
 }

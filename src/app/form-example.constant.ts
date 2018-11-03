@@ -24,4 +24,21 @@ export const FORM_EXAMPLE: Array<IField> = [
     'group': null,
     'order': 2
   },
+  {
+    'type': DataTableType.PASSWORD,
+    'model': 'password',
+    'value': '',
+    'placeHolder': 'PASSWORD_CREATE_PLACEHOLDER',
+    'validations': [
+      {
+        'type': 'required',
+        'value': null
+      }
+    ],
+    'listValue': null,
+    'mask': null,
+    'position': null,
+    'group': null,
+    'order': 5
+  },
 ];

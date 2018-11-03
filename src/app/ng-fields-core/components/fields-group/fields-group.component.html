@@ -8,3 +8,11 @@
   </ngx-field-custom-input>
 </div>
 
+<div *ngIf="typeIsEqual(field.type, dataTableType.PASSWORD)">
+  <ngx-field-password-hide
+    [configForm]="configForm"
+    [controlName]="field.model"
+    [isSubmittedForm]="isSubmittedForm"
+    [placeholder]="field.placeHolder"
+  ></ngx-field-password-hide>
+</div>
