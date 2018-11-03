@@ -1,0 +1,10 @@
+<div  *ngIf="typeIsEqual(field.type, dataTableType.STRING)">
+  <ngx-field-custom-input
+    [configForm]="configForm"
+    [controlName]="field.model"
+    [isSubmittedForm]="isSubmittedForm"
+    [mask]="field.mask"
+    [placeholder]="field.placeHolder">
+  </ngx-field-custom-input>
+</div>
+

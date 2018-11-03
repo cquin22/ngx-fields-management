@@ -1,0 +1,14 @@
+<div class="form-group" [formGroup]="configForm">
+  <input
+    [formControlName]="controlName"
+    [mask]="mask"
+    type="text"
+    class="form-control form-control-lg"
+    [ngClass]="{
+    'invalid-form ': dynamicFormService.validForm(configForm, controlName, isSubmittedForm),
+    'uppercase-input': placeholder === 'AUTHENTICATE.REGISTER.PAYMENT_CODE'
+    }"
+    [id]="controlName"
+    placeholder="{{placeholder  |translate}}"
+  >
+</div>

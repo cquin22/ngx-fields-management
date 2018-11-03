@@ -1,0 +1,18 @@
+<h1>Ngx field package</h1>
+
+
+<form  *ngIf="form" [formGroup]="form" >
+  <div class="col-12" *ngFor="let field of fields">
+    <div >
+      <ngx-field-group
+        [field]="field"
+        [configForm]="form"
+        [controlName]="field.model"
+        [mask]="field.mask"
+        [placeholder]="field.placeHolder"
+        [options]="field.listValue"
+      >
+      </ngx-field-group>
+    </div>
+  </div>
+</form>
