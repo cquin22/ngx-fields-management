@@ -1,0 +1,43 @@
+<div >
+  <div class="error " *ngIf="dynamicFormService.validForm(configForm, controlName, isSubmittedForm) ">
+
+    <p class="animated shake" *ngIf="dynamicFormService.validRequired(configForm, controlName, isSubmittedForm)">
+      <i class="material-icons"> error  </i> {{'REQUIRED' | translate}}
+    </p>
+    <p class="animated shake" *ngIf="dynamicFormService.validEmail(configForm, controlName, isSubmittedForm)">
+      <i class="material-icons"> error  </i>  {{'EMAIL_ERROR' | translate}}
+    </p>
+    <p class="animated shake" *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'creditCardTypeError')">
+      {{'INVALID_CARD' | translate}}
+    </p>
+    <p class="animated shake" *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'creditCardNumberLengthError') && !dynamicFormService.ccValidator(configForm, controlName, 'creditCardTypeError')">
+      {{'INVALID_CARD_LENGTH' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'creditCardCvvError')">
+      {{'CVV' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'passwordsMatch')">
+      {{'PASSWORD_MATCH' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'minlength')">
+      {{'MIN_LENGTH' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'maxlength')">
+      {{'MAX_LENGTH' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'max')">
+      {{'MAX_AMOUNT' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'clabeMatch')">
+      {{configForm.controls[controlName].errors.errorCode | translate}}
+    </p>
+
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'cpfvalidator')">
+      {{'CPF_ERROR' | translate}}
+    </p>
+    <p *ngIf="dynamicFormService.ccValidator(configForm, controlName, 'cnpjvalidator')">
+      {{'CNPJ_ERROR' | translate}}
+    </p>
+  </div>
+</div>
+

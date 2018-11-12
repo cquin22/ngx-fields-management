@@ -129,6 +129,9 @@ export class DynamicFormService {
       if(position.column === FieldPositionColumnType.RIGHT){
         style += ' right';
       }
+      if(position.column === FieldPositionColumnType.LEFT){
+        style += ' left';
+      }
       style += ' inline-form-' + position.width;
     }
     return style;

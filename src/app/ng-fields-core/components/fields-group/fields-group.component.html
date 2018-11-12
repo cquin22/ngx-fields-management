@@ -16,3 +16,21 @@
     [placeholder]="field.placeHolder"
   ></ngx-field-password-hide>
 </div>
+
+
+<div  *ngIf="typeIsEqual(field.type, dataTableType.LIST)">
+  <ngx-field-custom-list-basic
+    [configForm]="configForm"
+    [controlName]="field.model"
+    [isSubmittedForm]="isSubmittedForm"
+    [placeholder]="field.placeHolder"
+    [options]="field.listValue">
+  </ngx-field-custom-list-basic>
+</div>
+
+<ngx-field-custom-error
+  [configForm]="configForm"
+  [controlName]="field.model"
+  [isSubmittedForm]="isSubmittedForm"
+>
+</ngx-field-custom-error>

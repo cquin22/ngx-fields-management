@@ -1,6 +1,10 @@
-<div class="form-group" [formGroup]="configForm">
+<div class="form-group float-label" [formGroup]="configForm">
+  <label (click)="focusLabel()" class="form-control-placeholder" [ngClass]="{'focus': focusValue, 'focus-out': !focusValue}">{{placeholder | translate}}</label>
   <input
     [formControlName]="controlName"
+    #fileInput
+    (focus)="focus()"
+    (focusout)="focusOut()"
     [mask]="mask"
     type="text"
     class="form-control form-control-lg"
@@ -9,6 +13,5 @@
     'uppercase-input': placeholder === 'AUTHENTICATE.REGISTER.PAYMENT_CODE'
     }"
     [id]="controlName"
-    placeholder="{{placeholder  |translate}}"
   >
 </div>

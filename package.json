@@ -1,6 +1,6 @@
 {
   "name": "ng-field-management",
-  "version": "0.1.8",
+  "version": "1.0.4",
   "description": "Administration of dynamic fields for reactive forms with angular 6 and bootstrap 4",
   "main": "index.js",
   "scripts": {

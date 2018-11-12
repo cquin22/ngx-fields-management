@@ -7,15 +7,145 @@ textarea:focus, input:focus{
   outline: none !important;
 }
 
-.form-control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #fceeff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(244, 244, 244, 0.25);
+label{
+  color: #7f7c84;
+  font-size: 12px;
+}
+
+.form-group {
+  margin-bottom: 22px !important;
 }
 
 /* Errors */
 .invalid-form {
-  border: 1px solid red;
+  border: 1px solid #ff7175;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #d4d4d4;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(249, 249, 249, 0.25);
+}
+
+select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]), .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]), .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
+  height: calc(2.875rem + 0px);
+}
+
+.form-with-icon{
+  position: relative;
+  i{
+      color: #999;
+      font-size: 30px;
+      position: absolute;
+  }
+  &.right{
+    i{
+
+      right: 10px;
+      top: 10px;
+    }
+    .link-change{
+      position: absolute;
+      right: 15px;
+      top: 16px;
+      font-size: 13px;
+      font-family: 'Proxima Nova Alt Rg';
+      font-weight: bold;
+      cursor: pointer;
+      color: #15B597;
+    }
+  }
+  &.link{
+    i{
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+.float-label{
+  position: relative;
+  label{
+    position: absolute;
+    bottom: 3px;
+    left: 15px;
+    transition: all 200ms;
+    background: #fff;
+    padding: 4px;
+    &:hover{
+      cursor: text;
+    }
+    &.focus {
+      transform: translate3d(0, -26px, 0);
+      opacity: 1;
+      font-size: 11px;
+    }
+    &.focus-out {
+      transform: translate3d(0, 0, 0);
+      opacity: 0.7;
+      font-size: 14px;
+
+    }
+  }
+}
+
+
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  font-size: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+}
+
+
+
+@for $i from 1 through 100 {
+  .inline-form-#{$i} {
+    display: inline-block;
+    width: 1% * $i;
+    vertical-align: top;
+  }
+}
+
+
+.inline-bl {
+  &.left{
+    input, select {
+      border-radius: 0.3rem 0 0 0.3rem;
+    }
+  }
+  &.right{
+    input, select {
+      border-radius: 0 0.3rem 0.3rem 0;
+      border-left: transparent;
+    }
+  }
+}
+
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]), .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]), .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
+  height: calc(2.975rem + 0px);
+  font-size: 13px;
+}
+
+
+
+input[type="button" i]:disabled, input[type="submit" i]:disabled, input[type="reset" i]:disabled, input[type="file" i]:disabled::-webkit-file-upload-button, button:disabled, select:disabled, optgroup:disabled, option:disabled, select[disabled] > option {
+  color: #eee;
 }

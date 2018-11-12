@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {FormGroup, Validators} from '@angular/forms';
 import {DynamicFormService} from "../../services";
 
@@ -10,11 +10,15 @@ import {DynamicFormService} from "../../services";
 })
 export class CustomInputComponent implements OnInit {
 
+  @ViewChild('fileInput') fileInput:ElementRef;
+
   @Input() placeholder: string;
   @Input() mask: string;
   @Input() configForm: FormGroup;
   @Input() controlName: string;
   @Input() isSubmittedForm: boolean;
+
+  public focusValue: boolean;
 
 
   constructor(
@@ -25,6 +29,24 @@ export class CustomInputComponent implements OnInit {
 
   ngOnInit(){
 
+  }
+
+  public focusLabel(){
+    setTimeout(() => {
+      this.fileInput.nativeElement.click();
+      this.fileInput.nativeElement.focus();
+    }, 50);
+  }
+
+  public focus() {
+    this.focusValue = true;
+  }
+
+  public focusOut() {
+    let val = this.configForm.controls[this.controlName].value;
+    if (val.length == 0){
+      this.focusValue = false;
+    }
   }
 
 }

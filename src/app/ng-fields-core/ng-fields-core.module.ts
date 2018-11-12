@@ -12,8 +12,10 @@ import {NgxMaskModule} from "ngx-mask";
 import {HttpClient} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
-import {DynamicFormService} from "./services/dynamic-form.service";
+import {DynamicFormService} from "./services";
 import { PasswordHideComponent } from './components/password-hide/password-hide.component';
+import {CustomErrorComponent} from "./components/custom-error/custom-error.component";
+import { CustomListBasicComponent } from './components/custom-list-basic/custom-list-basic.component';
 
 
 
@@ -34,7 +36,9 @@ import { PasswordHideComponent } from './components/password-hide/password-hide.
     CreditCardTerminationMaskPipe,
     CreditCardTypePipe,
     FieldsGroupComponent,
-    PasswordHideComponent
+    PasswordHideComponent,
+    CustomErrorComponent,
+    CustomListBasicComponent
   ],
   providers: [
     DynamicFormService
@@ -49,7 +53,9 @@ import { PasswordHideComponent } from './components/password-hide/password-hide.
     CreditCardMaskPipe,
     CreditCardTerminationMaskPipe,
     CreditCardTypePipe,
-    PasswordHideComponent
+    PasswordHideComponent,
+    CustomErrorComponent,
+    CustomListBasicComponent
   ]
 })
 export class NgFieldsCoreModule {

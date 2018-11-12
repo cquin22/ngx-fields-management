@@ -1,0 +1,14 @@
+<div class="form-group position-relative" [formGroup]="configForm">
+  <i class="material-icons">
+    keyboard_arrow_down
+  </i>
+  <select
+    [formControlName]="controlName"
+    class="form-control form-control-lg"
+    [ngClass]="{'invalid-form ': dynamicFormService.validForm(configForm, controlName, isSubmittedForm)}"
+    [id]="controlName"
+  >
+    <option disabled selected>{{placeholder | translate}}</option>
+    <option *ngFor="let option of options">{{option}}</option>
+  </select>
+</div>
